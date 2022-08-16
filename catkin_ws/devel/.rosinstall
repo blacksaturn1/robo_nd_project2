@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/robond/projects/robo_nd_project2/catkin_ws/devel/setup.sh
