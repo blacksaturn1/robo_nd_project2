@@ -125,3 +125,12 @@ $ catkin_create_pkg ball_chaser roscpp std_msgs message_generation
 ### Test
 rossrv show DriveToTarget
 
+# Helpers
+rosnode list
+rostopic list
+rostopic info /topic
+rosmsg info geometry_msgs/Twist
+
+## Echo Topic Messages
+rostopic echo /turtle1/cmd_vel
+
