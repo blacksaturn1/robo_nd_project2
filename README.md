@@ -118,9 +118,36 @@ angular:
 $ cd /home/workspace/catkin_ws/src/
 $ catkin_create_pkg ball_chaser roscpp std_msgs message_generation
 
-## Create DriveToTarget Servioce
+## Create DriveToTarget Service
 
 ### Create .srv file
+
+
+## Create cpp and modify CMake
+
+## Test
+1. Window 1:
+roslaunch my_robot world.launch
+
+2. Window 2:
+rosrun ball_chaser drive_bot
+
+3. Window 3:
+$ rosservice call /ball_chaser/command_robot "linear_x: 0.5
+angular_z: 0.0"  # This request should drive your robot forward
+
+$ rosservice call /ball_chaser/command_robot "linear_x: 0.0
+angular_z: 0.5"  # This request should drive your robot left
+
+$ rosservice call /ball_chaser/command_robot "linear_x: 0.0
+angular_z: -0.5"  # This request should drive your robot right
+
+$ rosservice call /ball_chaser/command_robot "linear_x: 0.0
+angular_z: 0.0"  # This request should bring your robot to a complete stop
+
+
+
+
 
 ### Test
 rossrv show DriveToTarget
