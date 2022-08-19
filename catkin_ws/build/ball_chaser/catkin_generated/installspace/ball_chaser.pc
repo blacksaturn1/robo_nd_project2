@@ -1,0 +1,8 @@
+prefix=/home/robond/projects/robo_nd_project2/catkin_ws/install
+
+Name: ball_chaser
+Description: Description of ball_chaser
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robond/projects/robo_nd_project2/catkin_ws/install/lib 
+Requires: 
