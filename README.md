@@ -112,18 +112,19 @@ angular:
 
 ## Copy World
 
-# Code
+# Code drive_bot
 
 ## Create the ball_chaser Package
 $ cd /home/workspace/catkin_ws/src/
 $ catkin_create_pkg ball_chaser roscpp std_msgs message_generation
 
 ## Create DriveToTarget Service
-
-### Create .srv file
+1. Create .srv file
+2. rossrv show DriveToTarget
 
 
 ## Create cpp and modify CMake
+1. drive_bot.cpp
 
 ## Test
 1. Window 1:
@@ -145,12 +146,33 @@ angular_z: -0.5"  # This request should drive your robot right
 $ rosservice call /ball_chaser/command_robot "linear_x: 0.0
 angular_z: 0.0"  # This request should bring your robot to a complete stop
 
+## Add to ball_chaser.launch
+
+# Code process_image
+## Create cpp and modify CMake
+1. process_image.cpp
+
+## Modify ball_chaser.launch
+
+# Test
+## Start robot inside world
+$ cd /home/workspace/catkin_ws/
+$ source devel/setup.bash
+$ roslaunch my_robot world.launch
+
+## Run drive_bot and process_image
+$ cd /home/workspace/catkin_ws/
+$ source devel/setup.bash
+$ roslaunch ball_chaser ball_chaser.launch
+
+## Visualize
+$ cd /home/workspace/catkin_ws/
+$ source devel/setup.bash
+$ rosrun rqt_image_view rqt_image_view
 
 
 
 
-### Test
-rossrv show DriveToTarget
 
 # Helpers
 rosnode list
