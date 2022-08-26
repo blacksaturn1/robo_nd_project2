@@ -26,8 +26,9 @@ void process_image_callback(const sensor_msgs::Image img)
     std::string msg_feedback = "";
     int lmr=img.step/3;
     // TODO: Loop through each pixel in the image and check if there's a bright white one
-    for(int x=0;x<img.height*img.step;x++){
-	if(img.data[x]==white_pixel){
+    // RGB is 3 bytes
+    for(int x=0;x<(img.height*img.step)-3;x+=3){
+	if(img.data[x]==white_pixel && img.data[x+1]==white_pixel && img.data[x+2]==white_pixel){
    	   location_x=x;
            // Then, identify if this pixel falls in the left, mid, or right side of the image
    	   int location=location_x - ((location_x/img.step)*img.step)+1;
@@ -36,15 +37,15 @@ void process_image_callback(const sensor_msgs::Image img)
            // Depending on the white ball position, call the drive_bot function and pass velocities to it
            if(location<=lmr){
               // move left
-       drive_robot(0.5,0.5);
+		drive_robot(0.5,0.5);
            }
            if(location>2*lmr){
               // move right
-       drive_robot(0.5,-0.5);
+       		drive_robot(0.5,-0.5);
            }
            else{
-              // move straigth
-       drive_robot(0.5,0.0);
+              // move straight
+       		drive_robot(0.5,0.0);
             }
 
            return;
@@ -52,6 +53,7 @@ void process_image_callback(const sensor_msgs::Image img)
     }
     // Request a stop when there's no white ball seen by the camera
     if(location_x==no_white){
+       // ROS_INFO_STREAM("Sending STOP Drive cmd");
        drive_robot(0.0,0.0);
     }
     
