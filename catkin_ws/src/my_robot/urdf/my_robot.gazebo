@@ -95,18 +95,7 @@
       </plugin>
     </sensor>
   </gazebo>
-  <gazebo reference="chassis">
-    <material>Gazebo/Blue</material>
-  </gazebo>
-  <gazebo reference="RIGHT_wheel">
-    <material>Gazebo/Green</material>
-  </gazebo>
-  <gazebo reference="LEFT_wheel">
-    <material>Gazebo/Green</material>
-  </gazebo>
-  <gazebo reference="camera">
-    <material>Gazebo/Red</material>
-  </gazebo>
+
 
 
 
