@@ -912,7 +912,7 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='my_robot'>
+<!--       <model name='my_robot'>
         <pose frame=''>-9.3e-05 1.99996 0.100002 -1e-06 0.000349 0.001053</pose>
         <scale>1 1 1</scale>
         <link name='LEFT_wheel'>
@@ -934,6 +934,7 @@
           <wrench>0.933268 -44.5787 84.3663 0 -0 0</wrench>
         </link>
       </model>
+-->
       <model name='rc_bot'>
         <pose frame=''>0.000248 0.974739 0.12 0 1.4e-05 -0.000899</pose>
         <scale>1 1 1</scale>
@@ -6509,7 +6510,7 @@
         <projection_type>perspective</projection_type>
       </camera>
     </gui>
-    <model name='my_robot'>
+<!--  <model name='my_robot'>
       <link name='robot_footprint'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
@@ -6912,6 +6913,7 @@
       </plugin>
       <pose frame=''>0 2 0.1 0 -0 0</pose>
     </model>
+-->
     <model name='my_ball'>
       <link name='link_0'>
         <pose frame=''>0 0 0 0 -0 0</pose>
