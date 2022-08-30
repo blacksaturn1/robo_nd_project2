@@ -55,7 +55,7 @@ void process_image_callback(const sensor_msgs::Image img)
     // Request a stop when there's no white ball seen by the camera
     if(location_x==no_white){
        // ROS_INFO_STREAM("Sending STOP Drive cmd");
-       drive_robot(0.0,0.45);
+       drive_robot(0.0,0.0);
     }
     
 }
