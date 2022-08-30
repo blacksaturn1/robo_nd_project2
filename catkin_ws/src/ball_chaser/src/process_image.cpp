@@ -37,15 +37,16 @@ void process_image_callback(const sensor_msgs::Image img)
            // Depending on the white ball position, call the drive_bot function and pass velocities to it
            if(location<=lmr){
               // move left
-		drive_robot(0.5,0.5);
+		drive_robot(0.125,0.35);
            }
-           if(location>2*lmr){
+           else if(location>2*lmr){
               // move right
-       		drive_robot(0.5,-0.5);
+       		drive_robot(0.125,-0.35);
            }
            else{
               // move straight
-       		drive_robot(0.5,0.0);
+		ROS_INFO_STREAM("Sending STR Drive cmd");
+       		drive_robot(0.15,0.0);
             }
 
            return;
@@ -54,7 +55,7 @@ void process_image_callback(const sensor_msgs::Image img)
     // Request a stop when there's no white ball seen by the camera
     if(location_x==no_white){
        // ROS_INFO_STREAM("Sending STOP Drive cmd");
-       drive_robot(0.0,0.0);
+       drive_robot(0.0,0.45);
     }
     
 }

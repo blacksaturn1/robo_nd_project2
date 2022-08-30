@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/robond/projects/robo_nd_project2/catkin_ws/install/setup.sh
+    local-name: /home/workspace/robo_nd_project2/catkin_ws/install/setup.sh

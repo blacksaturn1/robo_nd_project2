@@ -1,5 +1,5 @@
 # generated from catkin/cmake/template/order_packages.context.py.in
-source_root_dir = "/home/robond/projects/robo_nd_project2/catkin_ws/src"
+source_root_dir = "/home/workspace/robo_nd_project2/catkin_ws/src"
 whitelisted_packages = "".split(';') if "" != "" else []
 blacklisted_packages = "".split(';') if "" != "" else []
-underlay_workspaces = "/home/robond/projects/robo_nd_project2/catkin_ws/devel;/home/robond/projects/udacity-robo-nd/catkin_ws/devel;/opt/ros/kinetic".split(';') if "/home/robond/projects/robo_nd_project2/catkin_ws/devel;/home/robond/projects/udacity-robo-nd/catkin_ws/devel;/opt/ros/kinetic" != "" else []
+underlay_workspaces = "/opt/ros/kinetic".split(';') if "/opt/ros/kinetic" != "" else []
